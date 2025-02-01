@@ -10,7 +10,7 @@ This project provides a macro to automate the process of earning skill points an
 ## How to use
 ### Skill Point
 > Watch the skill point farming guide here. [@jeremiepogi](https://www.youtube.com/watch?v=gOFWmkAjO9U)  
-> Tested with a BMW M6 Coupe FE in third gear maximum.
+> Tested with a Renault 5 Turbo FE.
 1. Place your ramp in the Super7 challenge card.
 2. Do "Barrel Roll" Once.
 3. While the car is stop in the air performing a "Barrel Roll", start the script.
