@@ -15,9 +15,10 @@ This project provides a macro to automate the process of earning skill points an
 1. Start the Super7 challenge with the Renault 5 Turbo FE.
     * Make sure to disable the traffic option, as it may cause the game to crash.
 2. Place a ramp.
-3. Do "Barrel Roll" Once.
-4. While the car is stop in the air performing a "Barrel Roll", start the script.
-5. The macro will automatically start farming.
+3. Perform a "Barrel Roll" and open the Blueprint Builder immediately.
+4. Wait for a few seconds and exit the Blueprint Builder.
+5. Start the script.
+6. The macro will automatically start farming.
 
 ### Wheelspin
 1. In the "Autoshow" menu, start the macro script.

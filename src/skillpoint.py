@@ -35,6 +35,17 @@ async def Macro(interrupt_event, loop=100, air_wait=56, landing_wait=12, rewind=
                 interrupt_event.set()
                 break
 
+        # rewind to the barrel roll point
+        for _ in range(rewind):
+            pyautogui.press('r') # rewind
+            await FindImage("Esc.png", 0.75, interval=0.1) # wait for the rewind to be available
+            await asyncio.sleep(0.1)
+        pyautogui.press("enter") # resume
+
+        """ # discard alert
+        await asyncio.sleep(1.5)
+        pyautogui.press("enter") """
+
         # stack the barrel roll points for air_wait seconds
         await asyncio.sleep(0.25)
         await asyncio.sleep(air_wait)
@@ -50,22 +61,11 @@ async def Macro(interrupt_event, loop=100, air_wait=56, landing_wait=12, rewind=
         await asyncio.sleep(1.5)
         pyautogui.press("enter") """
 
-        # landing and wait for the points to be added
+        # landing and wait for the points to be acquired.
         await asyncio.sleep(1)
         pyautogui.keyDown('s') # brake
         await asyncio.sleep(landing_wait)
         pyautogui.keyUp('s')
-
-        # rewind to the barrel roll point
-        for _ in range(rewind):
-            pyautogui.press('r') # rewind
-            await FindImage("Esc.png", 0.75, interval=0.1) # wait for the rewind to be available
-            await asyncio.sleep(0.1)
-        pyautogui.press("enter") # resume
-
-        """ # discard alert
-        await asyncio.sleep(1.5)
-        pyautogui.press("enter") """
 
 
 async def Stopper(interrupt_event):
